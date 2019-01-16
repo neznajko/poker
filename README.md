@@ -48,5 +48,5 @@ In *R* subdirectory there are two **R** files, the first one for building a data
 
 ![nasm](./img/mean.png)
 
-###Notes
+### Notes
 As you know the result of a poker game might be a tie, that is a split win. For some reason decided that in this case will count every player as a winner, and not introducing separate tie counter. For example the winning percentages for two players will be over 100% let's say 135% in this case 35% of the games are tie.
