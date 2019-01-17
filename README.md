@@ -1,13 +1,13 @@
-### Poker
+# poker
 *Texas Hold'em* calculator
 
 ---
 Have you wonder, when watching poker, how the winning percentages are immediately  
-known for *every* possible situation? The following **Monte Carlo** aims to give a hint  
-answering that question.
+known for *every* possible situation? The following **Monte Carlo** aims to give a hint answering  
+that question.
 
-The program is writen in two languages. **Nasm** , without using external libraries, and  
-**C** for speed and comparison considerations respectively.
+The program is writen in two languages. **Nasm**, without using external libraries, and **C**  
+for speed and comparison considerations respectively.
 
 ### Algorithm
  The problem is not very difficult but also not very trivial, without going in details about data structures and so, the program flow can be described as follows (*Knuth* style):
