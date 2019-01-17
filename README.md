@@ -6,7 +6,7 @@ Have you wonder, when watching poker, how the winning percentages are immediatel
 known for *every* possible situation? The following **Monte Carlo** aims to give a hint answering  
 that question.
 
-The program is writen in two languages. **Nasm**, without using external libraries, and **C**  
+The program is writen in two languages. **NASM**, without using external libraries, and **C**  
 for speed and comparison considerations respectively.
 
 ### The Algorithm
@@ -30,7 +30,7 @@ data structures and so, program flow can be described as follows (*Knuth* style)
  
  **P7.** [Reset] Reset deck pointer and jump to P2.
  
-### Nasm
+### NASM
 It is **32 Bit x86** assembly code but it will run on a 64 Bit machine as well. We can pass two arguments at command line; the maximum number of Monte Carlo simulations, that is the maximum number of games and a string with cards initiailzing players' pocket and community cards. Each card is represented with two characters; the rank *2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, A*, and the suit *c, d, h, s*, empty cards are marked with dashes.
 
 Let's for example look at the debugging output for one game.
