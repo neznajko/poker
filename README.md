@@ -9,24 +9,28 @@ that question.
 The program is writen in two languages. **Nasm**, without using external libraries, and **C**  
 for speed and comparison considerations respectively.
 
-### Algorithm
- The problem is not very difficult but also not very trivial, without going in details about data structures and so, the program flow can be described as follows (*Knuth* style):
+### The Algorithm
+The problem is not very difficult but also not very trivial, without going in details about  
+data structures and so, program flow can be described as follows (*Knuth* style):
  
- **P1.** [Initialise]  Parse arguments, initialize data, reset deck etc.
+ **P1.** [Initialise.]  Parse arguments, initialize data, reset deck etc.
  
- **P2.** [Shuffle] Shuffle the deck.
+ **P2.** [Shuffle.] Shuffle the deck.
  
  **P3.** [Cards?] Check if there are enough cards left in the deck, if no jump to P7.
  
- **P4.** [Deal] Deal some cards.
+ **P4.** [Deal.] Deal some cards.
  
- **P5.** [Count] Count winners. This is the essensial part of the program it generates all possible combinations from *pocket* and *community* cards to find players' hands and than the winner (or the winners, see *Notes*).
+ **P5.** [Count.] Count winners. This is the essensial part of the program it generates all  
+ possible combinations from *pocket* and *community* cards to find players' hands and than  
+ the winner (or the winners, see **Notes**).
  
- **P6.** [Done?] Increment the number of games. If maximun number of games limit is reached, output the result and terminate the program, otherwise jump to P3.
+ **P6.** [Done?] Increment number of games. If maximun limit is reached, output the result and  
+ terminate the program, otherwise jump to P3.
  
  **P7.** [Reset] Reset deck pointer and jump to P2.
  
-### nasm
+### Nasm
 It is **32 Bit x86** assembly code but it will run on a 64 Bit machine as well. We can pass two arguments at command line; the maximum number of Monte Carlo simulations, that is the maximum number of games and a string with cards initiailzing players' pocket and community cards. Each card is represented with two characters; the rank *2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, A*, and the suit *c, d, h, s*, empty cards are marked with dashes.
 
 Let's for example look at the debugging output for one game.
