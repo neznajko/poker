@@ -31,9 +31,9 @@ data structures and such, program flow can be described as follows (*Knuth* styl
  **P7.** [Reset] Reset deck pointer and jump to P2.
  
 ### nasm
-It is **32-bit x86** assembly code but it will run on a 64-bit machine as well. We can pass  
+It is **32-bit** x86 assembly code but it will run on a 64-bit machine as well. We can pass  
 two arguments at command line; the maximum number of Monte Carlo simulations, that is the  
-maximum number of games, and a string representing players' pocket and community cards. 
+maximum number of games, and a string representing players' pocket and community cards.  
 Each card is composed from two characters; the rank *2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, A*, and  
 the suit *c, d, h, s*, empty cards are marked with dashes.
 
