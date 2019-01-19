@@ -1,13 +1,13 @@
-## poker
+### poker
 *Texas Hold'em* calculator
 
 ---
-**Monte Carlo** simulation writen in two languages. In **nasm**, without using external libraries, and in **C**  
-for speed consideration and comparison respectively.
+A **Monte Carlo** simulation writen in two languages. In **nasm**, without using external  
+libraries, and in **C** for speed consideration and comparison respectively.
 
 ### The Algorithm
 The problem is not very difficult but also not very trivial, without going in details about  
-data structures and such, program flow can be described as follows (*Knuth* style):
+data structures and so the program flow can be described as follows (*Knuth* style):
  
  **P1.** [Initialise.]  Parse arguments, initialize data, reset deck etc.
  
@@ -33,15 +33,22 @@ maximum number of games, and a string representing players' pocket and community
 Each card is composed from two characters; the rank *2, 3, 4, 5, 6, 7, 8, 9, T, J, Q, K, A*, and  
 the suit *c, d, h, s*, empty cards are marked with dashes.
 
-Let's for example look at the debugging output of one game.
+For example let's look at the debugging output of one game.
 
 ![nasm](./img/screenshot_nasm.png)
 
-Here the first player has *Kalashnikov*, the second player has *Dynamite*, the third player may have any cards, and the first card on the turn is a *Jack* of *clubs*. We call these cards *scenario cards*, they are put in front of the *deck* and the ==*deck pointer*== is set accordingly after them.
+Here the first player has *Kalashnikov*, the second player has *Dynamite*, the third player  
+may have any weapons, and the first card on the turn is *Jack* of *Clubs*. We call these cards  
+*scenario cards*, they are put in front of the *deck* and the *deck pointer* is set accordingly  
+after them.
 
- The cards just before the second dump of the deck are called *gamecards* and are used for building players' hands by generating all possible combinations between pocket and community cards and pickinig the hand with maximum rank.
+The cards just before the second dump of the deck are called *gamecards* and are used for building  
+players' hands by generating all possible combinations between pocket and community cards and pickinig  
+the hand with maximum rank for each player.
  
- Than the win counter for the player with maximum hand rank is increaced until number of game limit is reached. *(If you wonder what winner 10 means the winners are represented as bit positions coz of the split win see **Notes**)*
+Than the win counter for the player with maximum hand rank is increaced until number of game limit is  
+reached. *(If you wonder what winner 10 means the winners are represented as bit positions coz of the  
+split win see **Notes**)*
  
 ### C
 Basically it's the same except some minor differences, like variable names, command line options etc. The main reason for writing the code in C as well is coz was curious about time performance comparison.
