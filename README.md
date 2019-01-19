@@ -67,6 +67,6 @@ Here are the plots (the distribution is for *1000* games):
 ![nasm](./img/mean.png)
 
 ### Notes
-In case of split win the program counts every player as a winner, without introducing a separate tie counter.
+In case of split win the program counts every player as a winner, without introducing a separate tie counter.  
 This is probably an issue that has to be resolved in the future, but if we have two players than the number of  
-ties can be obtained by substracting the sum of players wins from *100%*.
+ties can be obtained by substracting the sum of players winning percentages from *100%*.
