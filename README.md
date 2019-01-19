@@ -1,12 +1,8 @@
-# poker
+## poker
 *Texas Hold'em* calculator
 
 ---
-Have you wonder, when watching poker, how the winning percentages are immediately  
-known for *every* situation? The following **Monte Carlo** aims to give a possible answer  
-to that question.
-
-The program is writen in two languages. In **nasm**, without using external libraries, and in **C**  
+**Monte Carlo** simulation writen in two languages. In **nasm**, without using external libraries, and in **C**  
 for speed consideration and comparison respectively.
 
 ### The Algorithm
