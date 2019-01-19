@@ -42,7 +42,7 @@ may have any weapon, and the first card on the turn is *Jack* of *Clubs*. We cal
 *scenario cards*, they are put in front of the *deck* and the *deck pointer* is set accordingly  
 after them.
 
-The cards just before the second dump of the deck are called *gamecards* and are used for building  
+The cards just before the second dump of *deck* are called *gamecards* and are used for building  
 players' hands by generating all possible combinations between pocket and community cards and  
 pickinig the hand with maximum rank for each player.
  
@@ -52,13 +52,13 @@ split win see **Notes**)*
  
 ### C
 Basically it's the same except some minor differences, like variable names, command line options etc.  
-The main reason for writing the code in C as well is coz was curious about time performance comparison.
+The main reason for writing the code in **C** as well is coz was curious about time performance comparison.
 
 ![C](./img/screenshot_C.png)
 
 ### R
 In *R* subdirectory there are two **R** files, the first one for building a data frame with *100* time  
-measurments for different number of Monte Carlo simulations, and the second one for ploting the results.  
+measurments for different number of **Monte Carlo** simulations, and the second one for ploting the results.  
 Basically **nasm** is two times faster than **C** but bellow *1000* games there is practicaly no difference.  
 Here are the plots (the distribution is for *1000* games):
 
@@ -67,4 +67,6 @@ Here are the plots (the distribution is for *1000* games):
 ![nasm](./img/mean.png)
 
 ### Notes
-As you know the result of a poker game might be a tie, that is a split win. For some reason decided that in this case will count every player as a winner, and not introducing separate tie counter. For example the winning percentages for two players will be over 100% let's say 135% in this case 35% of the games are tie.
+In case of split win the program counts every player as a winner, without introducing a separate tie counter.
+This is probably an issue that has to be resolved in the future, but if we have two players than the number of  
+ties can be obtained by substracting the sum of players wins from *100%*.
