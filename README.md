@@ -38,25 +38,29 @@ For example let's look at the debugging output of one game.
 ![nasm](./img/screenshot_nasm.png)
 
 Here the first player has *Kalashnikov*, the second player has *Dynamite*, the third player  
-may have any weapons, and the first card on the turn is *Jack* of *Clubs*. We call these cards  
+may have any weapon, and the first card on the turn is *Jack* of *Clubs*. We call these cards  
 *scenario cards*, they are put in front of the *deck* and the *deck pointer* is set accordingly  
 after them.
 
 The cards just before the second dump of the deck are called *gamecards* and are used for building  
-players' hands by generating all possible combinations between pocket and community cards and pickinig  
-the hand with maximum rank for each player.
+players' hands by generating all possible combinations between pocket and community cards and  
+pickinig the hand with maximum rank for each player.
  
 Than the win counter for the player with maximum hand rank is increaced until number of game limit is  
 reached. *(If you wonder what winner 10 means the winners are represented as bit positions coz of the  
 split win see **Notes**)*
  
 ### C
-Basically it's the same except some minor differences, like variable names, command line options etc. The main reason for writing the code in C as well is coz was curious about time performance comparison.
+Basically it's the same except some minor differences, like variable names, command line options etc.  
+The main reason for writing the code in C as well is coz was curious about time performance comparison.
 
 ![C](./img/screenshot_C.png)
 
 ### R
-In *R* subdirectory there are two **R** files, the first one for building a data frame with 100 time measurments for different number of Monte Carlo simulations, and the second one for ploting the results. Basically **nasm** is two times faster than **C** but bellow 1000 games there is practicaly no difference. Here are the plots (the distribution is for 1000 games):
+In *R* subdirectory there are two **R** files, the first one for building a data frame with *100* time  
+measurments for different number of Monte Carlo simulations, and the second one for ploting the results.  
+Basically **nasm** is two times faster than **C** but bellow *1000* games there is practicaly no difference.  
+Here are the plots (the distribution is for *1000* games):
 
 ![nasm](./img/hist.png)
 
